@@ -1,0 +1,79 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(
+    180deg,
+    #ffb629 0,
+    #ffa537 10%,
+    #ff9243 20%,
+    #ff7e4b 30%,
+    #ff6951 40%,
+    #f25353 50%,
+    #d93f53 60%,
+    #c22f54 70%,
+    #ad2355 80%,
+    #9b1b56 90%,
+    #8c1859 100%
+  );
+}
+/* .box {
+  height: 250px;
+  width: 250px;
+  background: chocolate;
+  position: absolute;
+  top: 50%;
+  left: 50;
+} */
+/* transform: translate(-50%, -50%); */
+/* transition: all 1s; */
+/* animation: anim 1s 2s infinite; */
+/* } */
+/* .box:hover {
+  background: red; */
+/* height: 500px; */
+/* transform: translate(50px, 50px); */
+/* transform: rotate(45deg); */
+/* transform: skew(45deg); */
+/* transform: scale(1.5); */
+/* } */
+/* @keyframes anim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    background: khaki;
+  }
+} */
+.conteneur {
+  display: grid;
+  grid-template-columns: 150px 150px 150px 150px;
+  grid-template-rows: 2rem 2rem auto;
+
+  background-color: blue;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between; /*Alignement horizontal content = contenue */
+  place-content: center;
+  place-items: center;
+  /* align-content: center; Alignement vertical */
+  /* justify-items: center;
+  align-content: center; */
+}
+.item {
+  border: 1px solid cornsilk;
+}
+.item:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-column: 1 / 5;
+  grid-row: 3 / 4;
+  grid-area: 3 / 1 / 4 / 5; /*row starts / column starts / row end /column end */
+}
